@@ -29,7 +29,7 @@ export default function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href="https://github.com/BruhClient/Git-Dummy/releases/latest/download/GitDummy-windows.exe"
+            href="https://github.com/BruhClient/Git-Dummy/releases/latest/download/GitDummy-Setup.exe"
             className="inline-flex items-center justify-center gap-2 bg-gd-accent hover:bg-gd-accent-hover text-white font-semibold rounded-lg px-6 py-3 transition-colors"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
