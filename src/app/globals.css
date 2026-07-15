@@ -34,3 +34,90 @@ body {
   background: rgba(212, 119, 92, 0.3);
   color: #e8e6e3;
 }
+
+@keyframes gd-node-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes gd-drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(28px, -20px);
+  }
+}
+
+@keyframes gd-drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-24px, 24px);
+  }
+}
+
+@keyframes gd-drift-c {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 28px);
+  }
+}
+
+@keyframes gd-flow {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+.gd-bg-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-name: gd-node-pulse;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.gd-bg-drift {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.gd-bg-flow {
+  animation-name: gd-flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gd-bg-node,
+  .gd-bg-drift,
+  .gd-bg-flow {
+    animation: none !important;
+  }
+}

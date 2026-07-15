@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Tilt_Warp, Urbanist } from "next/font/google";
+import BackgroundGraph from "@/components/shared/background-graph";
 import "./globals.css";
 
 const tiltWarp = Tilt_Warp({
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={`${tiltWarp.variable} ${urbanist.variable} h-full antialiased`}
     >
       <body className="bg-gd-bg-primary text-gd-text-primary font-body min-h-screen overflow-x-hidden">
+        <BackgroundGraph />
         {children}
       </body>
     </html>
